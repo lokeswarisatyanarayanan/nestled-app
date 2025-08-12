@@ -6,9 +6,9 @@ Built using the [React Native + Zustand + Expo Router Template](https://github.c
 
 ## 📱 Screenshots
 
-*Screenshots coming soon...*
+<img width="612" height="1171" alt="Screenshot 2025-08-12 at 12 17 52 PM" src="https://github.com/user-attachments/assets/10e8131e-4d38-4ecd-a9c2-2a6fa8156ce1" />
 
-## ✨ Features
+## ✨ Features (In Progress)
 
 - Create and manage multiple grocery lists
 - Add, edit, and check off items
