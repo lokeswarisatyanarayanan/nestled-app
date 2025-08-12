@@ -1,7 +1,10 @@
-export { Screen } from './Screen/Screen';
-export { AppBar } from './AppBar/AppBar';
-export { Base } from './Base/Base';
+export { AppBar } from './AppBar';
+export type { AppBarProps } from './AppBar/types';
 
-export type { ScreenProps } from './Screen/Screen.types';
-export type { AppBarProps } from './AppBar/AppBar.types';
-export type { BaseProps } from './Base/Base.types';
+export { Base } from './Base';
+export type { BaseProps } from './Base/types';
+
+export { Screen } from './Screen';
+export type { ScreenProps } from './Screen/types';
+
+export * from './Core';

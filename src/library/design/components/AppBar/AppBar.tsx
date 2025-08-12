@@ -3,8 +3,8 @@ import { View, Text, StatusBar, Platform } from 'react-native';
 
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { appBarStyles } from './AppBar.styles';
-import type { AppBarProps } from './AppBar.types';
+import { appBarStyles } from './styles';
+import type { AppBarProps } from './types';
 import { useTheme } from '../../hooks';
 
 export const AppBar: React.FC<AppBarProps> = ({
@@ -22,19 +22,19 @@ export const AppBar: React.FC<AppBarProps> = ({
   safeArea = true,
   statusBarHeight = true,
 }) => {
-  const theme = useTheme();
+  const { colors } = useTheme();
   const insets = useSafeAreaInsets();
 
   const statusBarHeightValue =
     statusBarHeight && Platform.OS === 'android' ? StatusBar.currentHeight || 0 : 0;
 
   const topPadding = safeArea ? insets.top : statusBarHeightValue;
-  const bgColor = backgroundColor || theme.colors.background.primary;
+  const resolvedBackgroundColor = backgroundColor || colors.background.primary;
 
   const appBarStyle = [
     appBarStyles.container,
     {
-      backgroundColor: bgColor,
+      backgroundColor: resolvedBackgroundColor,
       height: height + topPadding,
       paddingTop: topPadding,
       elevation: Platform.OS === 'android' ? elevation : 0,
@@ -56,7 +56,7 @@ export const AppBar: React.FC<AppBarProps> = ({
             <View style={appBarStyles.titleContainer}>
               {title && (
                 <Text
-                  style={[appBarStyles.title, { color: theme.colors.text.primary }, titleStyle]}
+                  style={[appBarStyles.title, { color: colors.text.primary }, titleStyle]}
                   numberOfLines={1}
                 >
                   {title}
@@ -64,11 +64,7 @@ export const AppBar: React.FC<AppBarProps> = ({
               )}
               {subtitle && (
                 <Text
-                  style={[
-                    appBarStyles.subtitle,
-                    { color: theme.colors.text.secondary },
-                    subtitleStyle,
-                  ]}
+                  style={[appBarStyles.subtitle, { color: colors.text.secondary }, subtitleStyle]}
                   numberOfLines={1}
                 >
                   {subtitle}

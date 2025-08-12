@@ -2,8 +2,8 @@ import 'dotenv/config';
 
 export default {
   expo: {
-    name: 'expo-template-zustand-router',
-    slug: 'rn-template',
+    name: 'Nestled',
+    slug: 'nestled',
     version: '1.0.0',
     orientation: 'portrait',
     icon: './assets/icon.png',
@@ -16,24 +16,38 @@ export default {
     },
     ios: {
       supportsTablet: true,
-      bundleIdentifier: 'com.anonymous.rntemplate',
+      bundleIdentifier: 'com.chaoticwhirlwind.nestled',
+      googleServicesFile: './src/library/firebase/configuration/GoogleService-Info.plist',
+      icon: './assets/icon.png',
     },
     android: {
-      package: 'com.anonymous.rntemplate',
+      package: 'com.chaoticwhirlwind.nestled',
       adaptiveIcon: {
         foregroundImage: './assets/adaptive-icon.png',
         backgroundColor: '#ffffff',
       },
+      googleServicesFile: './src/library/firebase/configuration/google-services.json',
       edgeToEdgeEnabled: true,
     },
     web: {
       favicon: './assets/favicon.png',
     },
     scheme: 'rntemplate',
-    plugins: ['expo-router', 'expo-secure-store'],
-    extra: {
-      API_BASE_URL: process.env.API_BASE_URL,
-    },
+    plugins: [
+      'expo-router',
+      'expo-secure-store',
+      'expo-font',
+      '@react-native-firebase/app',
+      '@react-native-firebase/auth',
+      [
+        'expo-build-properties',
+        {
+          ios: {
+            useFrameworks: 'static',
+          },
+        },
+      ],
+    ],
     experiments: {
       typedRoutes: true,
     },

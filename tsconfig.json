@@ -4,7 +4,38 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@src/*": ["src/*"],
+      "@app/*": ["app/*"],
+      "@assets/*": ["assets/*"],
+      "@library/*": ["src/library/*"],
+
+      "@components": ["src/library/design/components/index.ts"],
+      "@components/*": ["src/library/design/components/*"],
+
+      "@core": ["src/library/design/components/Core/index.ts"],
+      "@core/*": ["src/library/design/components/Core/*"],
+
+      "@providers": ["src/library/design/providers/index.ts"],
+      "@providers/*": ["src/library/design/providers/*"],
+
+      "@theme": ["src/library/design/theme/index.ts"],
+      "@theme/*": ["src/library/design/theme/*"],
+
+      "@utils": ["src/library/utils/index.ts"],
+      "@utils/*": ["src/library/utils/*"],
+
+      "@api": ["src/library/api/index.ts"],
+      "@api/*": ["src/library/api/*"],
+
+      "@state": ["src/library/state/index.ts"],
+      "@state/*": ["src/library/state/*"],
+
+      "@storage": ["src/library/storage/index.ts"],
+      "@storage/*": ["src/library/storage/*"],
+
+      "@navigation": ["src/navigation/index.ts"],
+      "@navigation/*": ["src/navigation/*"]
     },
     "typeRoots": ["src/library/types", "./node_modules/@types"],
     "jsx": "react-native",
@@ -23,9 +54,6 @@
     "prettier.config.js",
     "babel.config.js",
     "app.config.ts",
-    "src/config-plugins/withAndroidSigning.js",
-    "src/config-plugins/withIosManualSigning.js",
-    "src/config-plugins/withAllowInsecureHttp.js",
     "plopfile.mjs",
     ".expo/types/**/*.ts",
     "expo-env.d.ts",

@@ -1,4 +1,4 @@
-import { createStore } from '@src/library/state';
+import { createStore } from '@state';
 
 import { createSlices, type AppState } from './createSlices';
 

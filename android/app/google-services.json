@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "897629781694",
+    "project_id": "nestled-d3ed5",
+    "storage_bucket": "nestled-d3ed5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897629781694:android:160876b5f7d9467483a8ef",
+        "android_client_info": {
+          "package_name": "com.chaoticwhirlwind.nestled"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoQ7TeL-8GL1HQvg3pLgKNFBJkLFvoMGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

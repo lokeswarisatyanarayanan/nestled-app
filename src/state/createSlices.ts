@@ -1,14 +1,16 @@
-import { createPostSlice, PostSlice } from '@src/features/post/state/post.slice';
-import type { TypedStateCreator } from '@src/library/state/types';
+import type { TypedStateCreator } from '@state';
+
+import { type AuthSlice, createAuthSlice } from '@/features/login/state';
 
 import { createAppStateSlice, type AppStateSlice } from './appStateSlice';
-
+import { createHomeSlice, type HomeSlice } from '../features/home/state/slice';
 /**
  * AppState interface that includes all slices.
  */
 export interface AppState {
   app: AppStateSlice;
-  post: PostSlice;
+  home: HomeSlice;
+  auth: AuthSlice;
   resetAppState: () => void;
 }
 
@@ -19,11 +21,13 @@ export interface AppState {
 export const createSlices: TypedStateCreator<AppState, AppState> = (set, get, store) => {
   return {
     app: createAppStateSlice(set, get, store),
-    post: createPostSlice(set, get, store),
+    home: createHomeSlice(set, get, store),
+    auth: createAuthSlice(set, get, store),
     resetAppState: () => {
       set(() => ({
         app: createAppStateSlice(set, get, store),
-        post: createPostSlice(set, get, store),
+        home: createHomeSlice(set, get, store),
+        auth: createAuthSlice(set, get, store),
       }));
     },
   };

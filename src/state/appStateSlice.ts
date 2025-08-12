@@ -1,17 +1,25 @@
-import { CreateSlice } from '@src/library/state';
+import { CreateSlice } from '@state';
 
 import { AppState } from './createSlices';
 
 export interface AppStateSlice {
-  isOnboardingCompleted: boolean;
-  setOnboardingCompleted: (val: boolean) => void;
+  authenticated: boolean;
+  onboarded: boolean;
+  setAuthenticated: (value: boolean) => void;
+  setOnboarded: (value: boolean) => void;
 }
 
 export const createAppStateSlice: CreateSlice<AppStateSlice, AppState> = set => ({
-  isOnboardingCompleted: false,
+  authenticated: false,
+  onboarded: false,
 
-  setOnboardingCompleted: val =>
+  setAuthenticated: value =>
     set(state => {
-      state.app.isOnboardingCompleted = val;
+      state.app.authenticated = value;
+    }),
+
+  setOnboarded: value =>
+    set(state => {
+      state.app.onboarded = value;
     }),
 });

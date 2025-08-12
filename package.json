@@ -1,12 +1,6 @@
 {
   "name": "nestled-app",
   "version": "1.0.0",
-  "keywords": [
-    "expo",
-    "template",
-    "react-native"
-  ],
-  "license": "MIT",
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
@@ -16,8 +10,7 @@
     "prepare": "husky",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
-    "format": "prettier --write. ",
-    "reset-project": "node scripts/reset-project.js"
+    "format": "prettier --write. "
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
@@ -26,20 +19,33 @@
     ]
   },
   "dependencies": {
+    "@expo-google-fonts/nunito": "^0.4.1",
+    "@expo-google-fonts/quicksand": "^0.4.0",
+    "@expo/vector-icons": "^14.1.0",
+    "@react-native-firebase/app": "^22.4.0",
+    "@react-native-firebase/auth": "^22.4.0",
+    "@react-native-firebase/firestore": "^22.4.0",
     "dotenv": "^17.0.0",
     "expo": "53.0.12",
     "expo-constants": "~17.1.6",
+    "expo-font": "~13.3.2",
     "expo-router": "~5.1.0",
     "expo-secure-store": "^14.2.3",
     "expo-status-bar": "~2.2.3",
+    "expo-vector-icons": "^10.0.1",
+    "firebase": "^12.0.0",
+    "fs": "^0.0.1-security",
     "immer": "^10.1.1",
     "react": "19.0.0",
     "react-native": "0.79.4",
     "react-native-gesture-handler": "~2.24.0",
-    "react-native-reanimated": "~3.17.4",
+    "react-native-reanimated": "^4.0.0",
     "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.11.1",
-    "zustand": "^5.0.5"
+    "react-native-svg": "15.11.2",
+    "react-native-worklets": "^0.4.0",
+    "zustand": "^5.0.5",
+    "expo-build-properties": "~0.14.8"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

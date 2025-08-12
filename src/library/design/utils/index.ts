@@ -1,4 +1,4 @@
-import type { SpacingKey, BackgroundColorKey } from '../components/Base/Base.types';
+import type { SpacingKey, BackgroundColorKey } from '../components/Screen/types';
 import type { Theme } from '../theme';
 
 export const getSpacingValue = (
@@ -16,12 +16,14 @@ export const getBackgroundColor = (
 ): string | undefined => {
   if (!colorKey) return undefined;
   if (typeof colorKey === 'string') {
-    // Check if it's a theme color key first
     if (colorKey === 'primary' || colorKey === 'secondary') {
       return theme.colors.background[colorKey as BackgroundColorKey];
     }
-    // Otherwise treat as direct color value
     return colorKey;
   }
   return theme.colors.background[colorKey];
+};
+
+export const getLineHeight = (fontSize: number, multiplier: number): number => {
+  return Math.round(fontSize * multiplier);
 };

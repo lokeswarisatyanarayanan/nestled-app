@@ -1,6 +1,6 @@
 export const routes = {
-  posts: {
-    list: '/posts',
-    detail: (id: string) => `/posts/${id}`,
-  },
-};
+  home: '/(tabs)/home',
+  cart: '/(tabs)/cart',
+  inventory: '/(tabs)/inventory',
+  letters: '/(tabs)/letters',
+} as const;
